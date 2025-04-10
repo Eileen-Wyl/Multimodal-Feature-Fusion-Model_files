@@ -1,4 +1,4 @@
-SMILES,T,P,Leak Size,Material Quantity,Number of carbon atoms,Number of hydrogen atoms,Number of oxygen atoms,Number of nitrogen atoms,Number of sulfur atoms,Molecular Weight,SP,DM,¦ÅHOMO,¦ÅLUMO,¦Ì,¦Ç,¦Ø,log(Explosion Diameter)
+SMILES,T,P,Leak Size,Material Quantity,Number of carbon atoms,Number of hydrogen atoms,Number of oxygen atoms,Number of nitrogen atoms,Number of sulfur atoms,Molecular Weight,SP,DM,Â¦Ã…HOMO,Â¦Ã…LUMO,Â¦ÃŒ,Â¦Ã‡,Â¦Ã˜,log(Explosion Diameter)
 CC,0,500,10,10,2,6,0,0,0,30.07,2,0,-0.3401,0.1048,-0.1176,0.4448,0.0156,1.908212025
 CC,0,500,10,20,2,6,0,0,0,30.07,2,0,-0.3401,0.1048,-0.1176,0.4448,0.0156,1.908688178
 CC,0,500,10,100,2,6,0,0,0,30.07,2,0,-0.3401,0.1048,-0.1176,0.4448,0.0156,1.908706399
