@@ -13,7 +13,14 @@ smiles_list = [
     'CCN(CC)CC', 'C=CC=O',
     'CC(=O)C', 'C1=CC=CC=C1',
     'C1CO1', 'CSC', '[H][H]',
-    'S'
+    'S','N','ClCc1ccccc1',
+    'Oc1ccccc1','CN=C=O','CS',
+    'CCN(CC)CC','Cc1ccccc1',
+    'C=CC1=CC=C1','C=CCl','C#C',
+    'C=CC(=O)N','[C-]#[O+]','CNC','N1CC1',
+    'C=O','C#N','CCO','Cc1cc(C)ccc1','N[NH2]',
+    'CCCCCCCCO','CC(C)CCCCC',
+
 ]
 
 
@@ -38,19 +45,16 @@ def tanimoto_matrix(smiles_list, radius=2, nBits=1024):
 sim_matrix = tanimoto_matrix(smiles_list)
 
 
-def plot_similarity(matrix, smiles_list, figsize=(12, 10)):
+def plot_similarity(matrix, smiles_list, figsize=(16, 14)):
     """绘制相似性热力图"""
-    # 截取 SMILES 字符串以避免过长
-    labels = [s[:10] + '...' if len(s) > 10 else s for s in smiles_list]
-
+    labels = smiles_list
     # 创建 DataFrame
     df = pd.DataFrame(matrix, index=labels, columns=labels)
 
     # 绘制热力图
     plt.figure(figsize=figsize)
-    sns.heatmap(df, annot=True, fmt=".2f", cmap="YlOrRd",
-                cbar_kws={'label': 'Tanimoto Similarity'},
-                annot_kws={"size": 8})
+    sns.heatmap(df, annot=False, fmt=".2f", cmap="YlOrRd",
+                cbar_kws={'label': 'Tanimoto Similarity'},)
     plt.title("Tanimoto Similarity Matrix (Morgan Fingerprints)")
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
